@@ -116,6 +116,18 @@ export default function UserHome() {
                 ))}
               </div>
             </div>
+
+            {config.resumeUrl && (
+              <a 
+                href={config.resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full inline-flex items-center justify-center px-6 py-4 border border-transparent text-base font-bold rounded-xl text-neutral-900 bg-white hover:bg-neutral-200 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                <Download size={20} className="mr-2" />
+                <span>{t('downloadResume')}</span>
+              </a>
+            )}
           </div>
         </div>
       </section>
